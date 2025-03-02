@@ -39,5 +39,8 @@ $$
 where, $\sigma$ is the amplitude and $\ell$ is the length scale parameters.
 The kernel function is described using a function.
 
-The framework uses sympy and sympytorch and computed using pytorch.
+The framework uses [sympy](https://www.sympy.org/en/index.html) and [sympytorch](https://github.com/patrick-kidger/sympytorch) and computed using [pytorch](https://pytorch.org/).
 
+
+## Design
+The PDE expression is parsed to a python AST which only supports linear operations and the differential operator described by a function $d(\cdot, \cdot)$. This AST is then converted to a sympy expression by chaining functions lazily. The final output of compilation would be a function that accepts a kernel function described by a sympy expression. 

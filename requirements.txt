@@ -1,0 +1,5 @@
+matplotlib==3.10.1
+numpy==2.2.3
+sympy==1.13.3
+sympytorch==0.1.4
+torch==2.6.0
